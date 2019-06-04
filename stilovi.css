@@ -1,0 +1,16 @@
+#logo {
+  position:fixed;
+  z-index:10;
+  top:0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#logo a {
+  display: block;
+}
+
+#logo img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}

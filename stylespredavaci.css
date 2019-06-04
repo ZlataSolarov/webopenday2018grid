@@ -1,0 +1,713 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url("imagespredavaci/pozadina.png");
+  background-repeat: no-repeat;
+background-size:contain;
+
+}
+
+#slika3 {
+  left: 0;
+}
+
+#slika4 {
+  float: right;
+}
+
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 500ms ease;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  color: white;
+  height: 100vh;
+  /* viewport height */
+  overflow-y: auto;
+}
+
+.topnav #myLinks.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Style the hamburger menu */
+.topnav a#icon {
+  background: rgba(1, 1, 1, 1);
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  transition: all .25s ease-in-out;
+}
+
+.topnav a#icon.open {
+  background: transparent;
+}
+
+.topnav a#icon:not(.open):hover {
+  background-color: rgba(1, 1, 1, 1);
+}
+
+#icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 60%;
+  background: white;
+  border-radius: 7px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: all .25s ease-in-out;
+}
+
+#icon span:nth-child(1) {
+  top: calc(50% - 16px);
+  transform-origin: left center;
+}
+
+#icon span:nth-child(2) {
+  top: calc(50% - 2px);
+  transform-origin: left center;
+}
+
+#icon span:nth-child(3) {
+  top: calc(50% + 12px);
+  transform-origin: left center;
+}
+
+#icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 27px;
+  left: 30px;
+}
+
+#icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 68px;
+  left: 30px;
+}
+
+/* Add a grey background color on mouse-over */
+.kocka {
+  height: calc(100% / 3);
+  min-height: 250px;
+}
+
+.kocka a {
+  color: white;
+  padding: 75px 45px 40px 45px;
+  text-decoration: none;
+  font-size: 45px;
+  display: inline-block;
+}
+
+.tekstumeniju {
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 50px;
+  margin: 0;
+}
+
+.meniprvakocka {
+  background-color: #c509bd;
+}
+
+.meniprvakocka:hover {
+  background-color: #9a0193;
+}
+
+.menidrugakocka {
+  background-color: #000768;
+}
+
+.menidrugakocka:hover {
+  background-color: #050547;
+}
+
+.menitrecakocka {
+  background-color: #00a8e1;
+}
+
+.menitrecakocka:hover {
+  background-color: #097bbc;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: transparent;
+  color: white;
+}
+
+#naslov {
+  clear: both;
+  font-size: 85px;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  color: #c509bd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2%;
+  clear: both;
+}
+
+.poravnanje {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.poravnanje2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kocke {
+  font-family: "Josefin Sans";
+  width: 600px;
+  text-align: justify;
+  line-height: 27px;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.kocke > img {
+  margin-right: 20px;
+}
+
+.sadrzaj {
+  font-size: 24px;
+  display: inline-block;
+  line-height: 30px;
+}
+
+.sadrzaj-ikonica {
+    display: flex;
+    align-items: center;
+}
+
+.sadrzaj > img {
+  vertical-align: bottom;
+}
+
+.sadrzaj a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.sadrzaj a:hover {
+  color: #c509bd;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.link-facebook {
+  text-decoration: none;
+}
+
+.link-gmail {
+  text-decoration: none;
+}
+
+.link-facebook svg path {
+  fill: #CECECE;
+  transition: all 300ms ease;
+}
+
+.link-facebook svg path:hover {
+  fill: #c509bd;
+}
+
+.link-instagram svg path {
+  fill: #CECECE;
+  transition: all 300ms ease;
+}
+
+.link-instagram svg path:hover {
+  fill: #c509bd;
+}
+
+.link-gmail svg path {
+  fill: #CECECE;
+  transition: all 300ms ease;
+}
+
+.link-gmail svg path:hover {
+  fill: #c509bd;
+}
+
+
+
+.tekst {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-decoration: none;
+  font-size: 21px;
+  font-family: "Josefin Sans";
+  color: white;
+  font-weight: 300;
+  vertical-align: text-top;
+}
+
+.tekst p {
+  margin: 0;
+}
+
+.linkovi {
+  padding: 50px 0;
+}
+
+.zafooter {
+  font-family: "Josefin Sans";
+  /* margin-left: 217px; */
+  display: flex;
+  margin: 0 70px;
+  flex-wrap: wrap;
+}
+
+.zafooter a {
+  color: white;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+.zafooter a:hover {
+  color: #e30cda;
+}
+
+.zafooter2 {
+  margin-top: -0.3%;
+  position: relative;
+  background-image: url("imagesindex/footer.png")
+}
+
+#linkovi2 a svg:hover {
+  fill: #c509bd;
+  transition: all 300ms ease;
+}
+
+#linkovi2 a svg path {
+  fill: #c509bd;
+  position: absolute;
+}
+
+.krug {
+  color: transparent;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.krug svg {
+  display: block;
+}
+
+.krug:hover {
+  /* border: 2px solid #c509bd; */
+  transition: all 300ms ease;
+  /* border-radius: 50%; */
+  border-color: #c509bd;
+}
+
+@media screen and (min-width: 1494px) {
+  .footer-kolona {
+    margin-right: 20px;
+    width: calc(100% / 4 - 15px);
+    flex: 0 0 calc(100% / 4 - 15px);
+  }
+
+  .footer-kolona:nth-child(4) {
+    margin-right: 0;
+
+  }
+  .linkovi{
+    padding:10px;
+  }
+}
+@media screen and (max-width: 1493px)and (min-width: 1198px) {
+  .footer-kolona {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 10px);
+    flex: 0 0 calc(100% / 2 - 10px);
+  }
+
+  .footer-kolona {
+    margin-bottom:30px;
+    margin-top:20px;
+    font-size:18px;
+  }
+  .footer-kolona:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .tekst,
+  .linkovi {
+    padding: 20px 0
+  }
+
+  .linkovi {
+      display: flex;
+      align-items: flex-start;
+  }
+
+  .sadrzaj {
+    font-size: 18px;
+    line-height: 12px;
+  }
+  .ic{
+    height:35px;
+  }
+  .linkovi{
+    padding:10px;
+  }
+  #nemanja {
+    margin-right: 20px;
+    height:120px;
+  }
+
+  #terezija {
+    margin-right: 20px;
+    height:120px;
+  }
+
+  #david {
+    margin-right: 20px;
+    height:120px;
+  }
+
+  #katarina {
+    margin-right: 20px;
+    height:120px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 938px) {
+  .footer-kolona {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 10px);
+    flex: 0 0 calc(100% / 2 - 10px);
+  }
+
+  .footer-kolona {
+    margin-bottom:30px;
+    margin-top:20px;
+    font-size:18px;
+  }
+  .footer-kolona:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .tekst,
+  .linkovi {
+    padding: 20px 0
+  }
+
+  .linkovi {
+      display: flex;
+      align-items: flex-start;
+  }
+  .por{
+    font-size:14px;
+  }
+
+
+
+  .ic{
+    height:25px;
+  }
+
+
+  #naslov {
+    clear: both;
+    font-size: 60px;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: #c509bd;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    clear: both;
+
+  }
+
+  .poravnanje {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .poravnanje2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+
+  .kocke {
+    font-family: "Josefin Sans";
+    width: 800px;
+    text-align: justify;
+    line-height: 25px;
+  }
+
+  .sadrzaj {
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .light{
+    justify-content: flex-start;
+  }
+
+  .kocke > img {
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .linkovi{
+    padding:10px;
+  }
+
+}
+@media screen and (max-width: 937px) and (min-width: 651px){
+  .footer-kolona {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 10px);
+    flex: 0 0 calc(100% / 2 - 10px);
+  }
+
+  .footer-kolona {
+    margin-bottom:30px;
+    margin-top:20px;
+    font-size:18px;
+  }
+  .footer-kolona:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .tekst,
+  .linkovi {
+    padding: 20px 0
+  }
+
+  .linkovi {
+      display: flex;
+      align-items: flex-start;
+  }
+  .por{
+    font-size:12px;
+  }
+  .ic{
+    height: 25px;
+  }
+  #naslov {
+    clear: both;
+    font-size: 60px;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: #c509bd;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    clear: both;
+
+  }
+
+  .poravnanje {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .poravnanje2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+
+  .kocke {
+    font-family: "Josefin Sans";
+    width:800px;
+    text-align: justify;
+    line-height: 25px;
+  }
+
+  .sadrzaj {
+    font-size: 16px;
+    line-height: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sadrzaj-ikonica {
+      justify-content: center;
+  }
+
+  .linkovi{
+    padding:10px;
+  }
+
+  .light{
+    justify-content: center;
+  }
+
+  .kocke > img {
+    height: 150px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+}
+@media screen and (max-width: 650px) {
+  body {
+
+    overflow-x: hidden;
+    background-image: url("imagespredavaci/pozadina.png");
+    background-repeat:no-repeat;
+    background-size:900px;
+  }
+  .footer-kolona {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-kolona {
+    font-size:16px;
+    margin-top:-20px;
+  }
+
+  .linkovi {
+      display: flex;
+      align-items: flex-start;
+  }
+  .topnav{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    min-height: 100px;
+    min-width: 100px;
+    left: 0;
+    height:100vh;
+  }
+  .por{
+    font-size:12px;
+  }
+  .ic{
+    height:25px;
+  }
+  #naslov {
+    clear: both;
+    font-size:50px;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: #c509bd;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top:140px;
+    clear: both;
+  }
+
+  .poravnanje {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .poravnanje2 {
+   display: block;
+  }
+
+  .kocke {
+    margin: auto;
+    font-family: "Josefin Sans";
+    max-width: 400px;
+    width: 100%;
+    line-height: 25px;
+  }
+
+  .sadrzaj {
+    font-size: 16px;
+    line-height: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sadrzaj-ikonica {
+    justify-content: center;
+  }
+
+  .kocke > img {
+    height: 150px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  .linkovi{
+    padding:10px;
+  }
+
+  .light{
+    justify-content: center;
+  }
+  .kocka a {
+    color: white;
+    padding: 75px 45px 40px 45px;
+    text-decoration: none;
+    font-size: 35px;
+    display: inline-block;
+  }
+
+  .tekstumeniju {
+    line-height: 30px;
+    font-size:15px;
+    padding-left: 50px;
+    margin: 0;
+  }
+
+}

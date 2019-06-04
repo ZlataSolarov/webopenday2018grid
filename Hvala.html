@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hvala!</title>
+  <link rel="icon" type="image/ico" href="logo.png" />
+
+  <link rel="stylesheet" href="stilovi.css">
+  <link rel="stylesheet" href="Hvala.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <!-- Navigation links (hidden by default) -->
+    <a href="javascript:void(0);" id="icon" onclick="navOpen()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div id="myLinks">
+      <div class="kocka meniprvakocka">
+        <a href="predavaci.html" >Predavači</a>
+        <p color="white" class="tekstumeniju"> Od koga i šta možeš saznati </br>na ovom događaju </p>
+      </div>
+      <div class="kocka menidrugakocka">
+        <a href="informacijeikontakt.html" >Informacije i kontakt</a>
+        <p color="white" class="tekstumeniju"> Osnovne informacije o dogadjaju </br>gde mozete priložiti sugestije ili </br> stupiti u kontakt sa organizatorima</p>
+      </div>
+      <div class="kocka menitrecakocka">
+        <a href="galerija.html">Galerija i video materijal</a>
+        <p color="white" class="tekstumeniju">Fotografije i video zapisi</br>sa prethodnih dogadjaja</p>
+      </div>
+    </div>
+  </div>
+  <div id="logo">
+    <a href="index.html">
+      <img src="logo.png" height="120px">
+    </a>
+  </div>
+<img src="imageshvala/ilustracija-09.png" class="ilus">
+
+<div class="ceodiv">
+  <p id="hvala">Hvala na saradnji!</p>
+<p id="info">Komentar je prosleđen službi i biće Vam odgovoreno na e-mail</p>
+<a href="index.html">
+<button class="button">Vrati se na početnu</button>
+</a>
+
+
+
+<img src="imageshvala/ilustracija2-03-03.png" class="ilus2">
+
+
+</div>
+
+  <script>
+  function navOpen() {
+    var links = document.getElementById("myLinks");
+    var hamburgerLink = document.getElementById("icon");
+    var topNav = document.getElementsByClassName("topnav")[0];
+
+    if (links.classList.contains('visible')) {
+      links.classList.remove('visible');
+      hamburgerLink.classList.remove('open');
+    } else {
+      links.classList.add('visible');
+      hamburgerLink.classList.add('open');
+    }
+  }
+
+
+
+
+  </script>
+
+</body>
+
+</html>

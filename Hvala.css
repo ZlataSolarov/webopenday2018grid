@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+}
+
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  min-height: 100px;
+  min-width: 100px;
+}
+.ilus2{
+  display: none;
+}
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 500ms ease;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  color: white;
+  height: 100vh;
+  /* viewport height */
+  overflow-y: auto;
+}
+
+.topnav #myLinks.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Style the hamburger menu */
+.topnav a#icon {
+  background: rgba(1, 1, 1, 1);
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  transition: all .25s ease-in-out;
+}
+
+.topnav a#icon.open {
+  background: transparent;
+}
+
+.topnav a#icon:not(.open):hover {
+  background-color: rgba(1, 1, 1, 1);
+}
+
+#icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 60%;
+  background: white;
+  border-radius: 7px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: all .25s ease-in-out;
+}
+
+#icon span:nth-child(1) {
+  top: calc(50% - 16px);
+  transform-origin: left center;
+}
+
+#icon span:nth-child(2) {
+  top: calc(50% - 2px);
+  transform-origin: left center;
+}
+
+#icon span:nth-child(3) {
+  top: calc(50% + 12px);
+  transform-origin: left center;
+}
+
+#icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 27px;
+  left: 30px;
+}
+
+#icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 68px;
+  left: 30px;
+}
+
+/* Add a grey background color on mouse-over */
+.kocka {
+  height: calc(100% / 3);
+  min-height: 250px;
+}
+
+.kocka a {
+  color: white;
+  padding: 75px 45px 40px 45px;
+  text-decoration: none;
+  font-size: 45px;
+  display: inline-block;
+}
+
+.tekstumeniju {
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 50px;
+  margin: 0;
+}
+
+.meniprvakocka {
+  background-color: #c509bd;
+}
+
+.meniprvakocka:hover {
+  background-color: #9a0193;
+}
+
+.menidrugakocka {
+  background-color: #000768;
+}
+
+.menidrugakocka:hover {
+  background-color: #050547;
+}
+
+.menitrecakocka {
+  background-color: #00a8e1;
+}
+
+.menitrecakocka:hover {
+  background-color: #097bbc;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: transparent;
+  color: white;
+}
+
+.ceodiv {
+  line-height: 40px;
+  margin-left: 8%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.ilus {
+  position: relative;
+  float: right;
+}
+
+.button {
+  font-family: "Josefin Sans";
+  weight: 150px;
+  cursor: pointer;
+  outline: none;
+  background: rgba(197, 9, 189, 0.1);
+  padding: 18px 70px;
+  color: #c509bd;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 4px solid #c509bd;
+  transition: all 300ms ease;
+  margin-top: 100px;
+}
+
+.button:hover {
+  background-color: rgba(197, 9, 189, 1);
+  color: white;
+}
+
+#hvala {
+  margin-top: 40%;
+  font-family: "Josefin Sans";
+  font-size: 65px;
+
+}
+
+#info {
+  font-family: "Josefin Sans";
+  font-size: 25px;
+  color: #686868;
+
+}
+@media screen and (max-width: 1600px) and (min-width: 1199px) {
+
+  #info {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    width: 300px;
+    color: #686868;
+
+  }
+  #hvala {
+    margin-top: 40%;
+    font-family: "Josefin Sans";
+    font-size: 65px;
+    width: 300px;
+    line-height: 80px;
+
+  }
+
+}
+
+@media screen and (max-width: 1199px) and (min-width: 550px) {
+
+.ilus{
+  display: none;
+}
+.ilus2{
+  display:block;
+  margin-top:5%;
+  z-index: -3;
+  max-width:100%;
+
+}
+.button {
+  margin:0 auto;
+  font-family: "Josefin Sans";
+  weight: 150px;
+  cursor: pointer;
+  outline: none;
+  background: rgba(197, 9, 189, 0.1);
+  padding: 18px 70px;
+  color: #c509bd;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 4px solid #c509bd;
+  transition: all 300ms ease;
+  margin-top:10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: rgba(197, 9, 189, 1);
+  color: white;
+}
+.ceodiv {
+  width: 100%;
+  clear:both;
+  line-height: 40px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top:20%;
+  margin: auto;
+
+}
+
+#hvala {
+
+  margin:auto;
+  font-family: "Josefin Sans";
+  font-size:53px;
+
+}
+
+#info {
+  font-family: "Josefin Sans";
+  font-size:25px;
+ text-align: center;
+  color: #686868;
+  padding-left:50px;
+  padding-right:50px;
+
+}
+}
+
+@media screen and (max-width: 549px) {
+  .topnav {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    min-height: 100px;
+    min-width: 100px;
+  }
+  .ilus{
+    display: none;
+
+  }
+  .ilus2{
+    display:block;
+    margin-top:12%;
+    z-index: -3;
+    max-width:100%;
+
+
+    overflow: hidden;
+  }
+  .button {
+    margin:0 auto;
+    font-family: "Josefin Sans";
+    height: 50px;
+    width:200px;
+    cursor: pointer;
+    outline: none;
+    background: rgba(197, 9, 189, 0.1);
+    padding:14px 10px;
+    color: #c509bd;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 4px solid #c509bd;
+    transition: all 300ms ease;
+    margin-top:10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .button:hover {
+    background-color: rgba(197, 9, 189, 1);
+    color: white;
+  }
+  .ceodiv {
+    width: 100%;
+    clear:both;
+    line-height: 40px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top:20%;
+    margin: auto;
+
+  }
+
+  #hvala {
+
+    margin:auto;
+    font-family: "Josefin Sans";
+    font-size:50px;
+    line-height:65px;
+    weight: 100%;
+    padding-left:50px;
+    padding-right:50px;
+    text-align: center;
+
+
+
+  }
+
+  #info {
+    font-family: "Josefin Sans";
+    font-size:18px;
+    line-height:20px;
+    text-align: center;
+    color: #686868;
+    weight:500px;
+    padding-left:50px;
+    padding-right:50px;
+
+  }
+  .kocka a {
+    color: white;
+    padding: 75px 45px 40px 45px;
+    text-decoration: none;
+    font-size: 35px;
+    display: inline-block;
+  }
+
+  .tekstumeniju {
+    line-height: 30px;
+    font-size:15px;
+    padding-left: 50px;
+    margin: 0;
+  }
+
+}
